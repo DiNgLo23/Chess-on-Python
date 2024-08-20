@@ -103,29 +103,9 @@ def hod_queen(pos_now,pos_will,map_ch):
 
 def king(pos_now,pos_will,map_ch):
     all_pos_king = [[pos_now[0]-1,pos_now[1]-1],[pos_now[0],pos_now[1]-1],[pos_now[0]+1,pos_now[1]-1],[pos_now[0]+1,pos_now[1]],[pos_now[0]+1,pos_now[1]+1],[pos_now[0],pos_now[1]+1],[pos_now[0]-1,pos_now[1]+1],[pos_now[0]-1,pos_now[1]]]
-    print(all_pos_king)
     return True if pos_will in all_pos_king else False
 
 
 
 
 
-sboard = [['wlrook', 'wlhourse', 'wlelf', 'wking', 'wqueen', 'wrelf', 'wrhourse', 'wrrook'],
-        ['wpawn1', 'wpawn2', 'dking2', '      ', 'wpawn5', 'wpawn6', 'wpawn7', 'wpawn8'],
-        ['      ', '      ', '      ', '      ', '      ', '      ', '      ', '      '],
-        ['dking2', '      ', '      ', '      ', '      ', '      ', '      ', '      '],
-        ['      ', '      ', '      ', '      ', '      ', '      ', '      ', '      '],
-        ['      ', '      ', '      ', 'dpawn4', '      ', '      ', '      ', '      '],
-        ['dpawn1', 'dpawn2', 'dpawn3', '      ', 'dpawn5', 'dpawn6', 'dpawn7', 'dpawn8'],
-        ['dlrook', 'dlhourse', 'dlelf', 'dking', 'dqueen', 'drelf', 'drhourse', 'drrook']]
-
-board = [['wlrook', 'wlhourse', 'wlelf', 'wking', 'wqueen', 'wrelf', 'wrhourse', 'wrrook'],
-        ['wpawn1', 'wpawn2', 'dking2', '', 'wpawn5', 'wpawn6', 'wpawn7', 'wpawn8'],
-        ['', '', '', '', '', '', '', ''],
-        ['dking2', '', '', '', '', '', '', ''],
-        ['', '', '', '', '', '', '', ''],
-        ['', '', '', 'dpawn4', '', '', '', ''],
-        ['dpawn1', 'dpawn2', 'dpawn3', '', 'dpawn5', 'dpawn6', 'dpawn7', 'dpawn8'],
-        ['dlrook', 'dlhourse', 'dlelf', 'dking', 'dqueen', 'drelf', 'drhourse', 'drrook']]
-
-print(king(pos_now=[3,0],pos_will=[3,1],map_ch=board))
